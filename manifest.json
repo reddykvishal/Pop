@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "Pop",
+  "version": "0.1",
+  "content_scripts": [
+    {
+      "matches": ["https://twitter.com/*"],
+      "js": ["jquery/jquery-3.3.1.min.js", "content.js"]
+    }
+  ],
+  "background": [
+    {
+        "scripts": ["jquery/jquery-3.3.1.min.js", "background.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    "data/*.json"
+]
+}

@@ -1,0 +1,28 @@
+{
+  "all_tweets": {
+    "Mueller Report":[
+      {
+        "tweet": "Rep. Jim Himes (D-CT) reacts to Republicans calling for Adam Schiff to step down; 'I don't think Adam Schiff said anything that wasn't true'",
+        "user": "FoxNewsSunday",
+        "link": "https://twitter.com/FoxNewsSunday/status/1112352302713704450?s=20",
+        "photo": "https://twitter.com/FoxNewsSunday/photo",
+        "score": "-2"
+      },
+      {
+        "tweet": "JUST IN: The House Judiciary Committee approved a subpoena to obtain the full confidential report from special counsel Robert Mueller",
+        "user": "CNN",
+        "link": "https://twitter.com/CNN/status/1113452580389249024?s=20",
+        "photo": "https://twitter.com/CNN/photo",
+        "score": "2"
+      },
+      {
+        "tweet": "Kellyanne Conway on the President saying the Mueller report totally exonerated him #FNS #muellerreport",
+        "user": "FoxNewsSunday",
+        "link": "https://twitter.com/FoxNewsSunday/status/1112348824494895104?s=20",
+        "photo": "https://twitter.com/FoxNewsSunday/photo",
+        "score": "-2"
+      }
+    ]
+
+  }
+}
