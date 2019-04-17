@@ -45,7 +45,6 @@ fetch(url)
     	//Pop Link
  
             var popLink = '<a class="pop" href="#">Pop It!</a>';
-            $("article").css( "border", "1px solid gray" );
             $("article").append(popLink);
 
     	$(".pop").click(function(e) {
