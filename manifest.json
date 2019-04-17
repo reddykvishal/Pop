@@ -4,8 +4,9 @@
   "version": "0.1",
   "content_scripts": [
     {
-      "matches": ["https://twitter.com/*"],
-      "js": ["jquery/jquery-3.3.1.min.js", "content.js"]
+      "matches": ["https://mobile.twitter.com/*"],
+      "js": ["jquery/jquery-3.3.1.min.js", "content.js"],
+      "css" : ["css/style.css"]
     }
   ],
   "background": [

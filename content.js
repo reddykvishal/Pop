@@ -7,34 +7,52 @@ fetch(url)
     function readJSON(json){
 
     	//Toggle function
+        setTimeout( function(){
 
+        //Append IDs for each Tweet
+        var keys = [];
+        for (property in json["all_tweets"]) {
+            keys.push(property);
+        }
+        var i = 0
+        $("article").each(function(){
+            $(this).addClass(keys[i]);
+            i = i+1;
+        });
 
     	for (property in json["all_tweets"]) {
     		//This is static for now, needs to be changed to a keyword or hashtag that we search for each tweet
-    		if(property === "Mueller Report"){
+
+            for (var j=0;j<keys.length;j++)
+            {
+    		if(property === keys[j]){
     			for (var i =0; i< json["all_tweets"][property].length; i++){
 
-    				var elm = '<li class="js-stream-item stream-item stream-item"> <div class="tweet testing">' +
+    				var elm = '<div class="tweet testing item">' +
     				json["all_tweets"][property][i]["tweet"] + 
     				'<br /><a href="' + json["all_tweets"][property][i]["link"] + 
     				'">Click to View</a> | ' + json["all_tweets"][property][i]["user"] +
-    				'</div></li>';
-    				$(elm).prependTo(".stream-items");
-
-    				$( "#stream-item-tweet-1113458635378704385 .content .stream-item-header").clone().appendTo( ".testing" );
-    				$( "#stream-item-tweet-1113458635378704385 .content .js-tweet-text-container").clone().appendTo( ".testing" );
-    				$(elm).hide();
-
+    				'</div>';
+                    console.log(keys[j]);
+    				$(elm).insertAfter('.' + keys[j]);
+                    $(".testing").hide();
     			}
     		}
+            }
     	}
 
+        $(".r-1g40b8q h2").text("Pop Feed");
     	//Pop Link
-    	var popLink = '<a class="pop" href="#">Pop It!</a>';
-    	$(popLink).prependTo(".stream-items");
+ 
+            var popLink = '<a class="pop" href="#">Pop It!</a>';
+            $("article").css( "border", "1px solid gray" );
+            $("article").append(popLink);
+
     	$(".pop").click(function(e) {
 	    e.preventDefault();
-	    $(".testing").toggle(); 
+	    $(".testing").toggle();
 		});
+        }, 1000);
+
 
     }
