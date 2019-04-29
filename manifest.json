@@ -15,6 +15,7 @@
     }
   ],
   "web_accessible_resources": [
-    "data/*.json"
+    "data/*.json",
+    "img/*.png"
 ]
 }
